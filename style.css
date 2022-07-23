@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ---------- General Styles ------- */
+:root{
+    /* Base font size for the entire website */
+    font-size: 10px;
+
+    /* --------Colors------- */
+    /* m=modified */
+    /* l = light */
+    /* d = dark */
+    --color-primary: hsl(232,15%,19%);
+    --color-primary-m-l: hsla(231,15%,19,0.55);
+    --color-primary-m-d: hsla(213,15%,19,0.85);
+
+    --color-secondary: rgb(255,170,6);
+    --color-secondary-m-l: rgba(255,170,6,0.55);
+    --color-secondary-m-d: rgba(255,170,6,0.85);
+
+    --color-tertiary: #1a508b;
+    --color-tertiary-m-l: hsla(211,68%,32%,0.55);
+    --color-tertiary-m-d: hsla(211,68%,32%,0.85);
+
+    --color-quaternary: rgb(231,231,230);
+    --color-quaternary-m-l: rgba(231,231,230,0.55);
+    --color-quaternary-m-d: rgba(231,231,230,0.85);
+
+    /*------------ Paddings ------------- */
+    /* 
+        xl = xtra large
+        l = large
+        m = medium
+        s = small
+     */
+    --padding-xl: calc(2rem + 6vh) calc(2rem + 6vw);
+    --padding-l: calc(3rem + 4vh) calc(3rem + 4vw);
+    --padding-m: calc(2rem + 2vh) calc(2rem + 2vw);
+    --padding-s: calc(1rem + 1vh) calc(1rem + 1vw);
+
+    /* ------------Font size */
+     /* 
+        l = large
+        m = medium
+        s = small
+        xs = extra small
+     */ 
+
+     --font-size-l: calc(1.5rem + 2vw);
+     --font-size-m: calc(1rem + 1.5vw);
+     --font-size-s: calc(1rem + 1vw);
+     --font-size-xs: calc(0.5rem + 0.8vw);
+
+     /* ---------- Font Family */
+     --font-family-main: "Fredoka",sans-serif;
+     --font-family-sub: "Poppins",sans-serif;   
+}
+
+body{
+    font-family: var(--font-family-sub);
+    line-height: 1.5;
+}
+
