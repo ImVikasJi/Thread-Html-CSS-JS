@@ -65,3 +65,63 @@ body{
     line-height: 1.5;
 }
 
+.container{
+    display: grid;
+    grid-template-columns: [container-start] 1fr [center-start] 
+    repeat(10, [col-start] minmax(min-content, 11rem) [col-end])
+    [center-end] 1fr [container-end];
+
+    grid-template-rows:  repeat(6, min-content);
+    background-color: var(--color-primary);
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-quaternary);
+}
+
+li{
+    list-style: none;
+}
+
+/* ------------------------------------------------------------------- Header */
+#main-header{
+    height: 250px;
+    background-color: var(--color-secondary);
+    grid-column: center-start / center-end;
+}
+
+/* ------------------------------------------------------------------- Hero */
+.hero{
+    height: 400px;
+    background-color: var(--color-tertiary);
+    grid-column: center-start / center-end;
+}
+
+/* ------------------------------------------------------------------- Features */
+.features{
+    height: 400px;
+    background-color: var(--color-quaternary);
+    grid-column: center-start / center-end;
+}
+
+/* ------------------------------------------------------------------- Diversify */
+.diversify{
+    height: 400px;
+    background-color: var(--color-secondary);
+    grid-column: center-start / center-end;
+}
+
+/* ------------------------------------------------------------------- Testimonials */
+.testimonials{
+    height: 400px;
+    background-color: var(--color-tertiary);
+    grid-column: center-start / center-end;
+}
+
+/* ------------------------------------------------------------------- Footer */
+#footer{
+    height: 400px;
+    background-color: var(--color-quaternary);
+    grid-column: container-start / container-end;
+}
