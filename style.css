@@ -378,7 +378,7 @@ li{
     .fa-star,
     .hero__content--rating__text p,
     .hero__content--getting-started__Credit-card p,
-    .hero__content--getting-started__free-templates p,{
+    .hero__content--getting-started__free-templates p{
         font-size: 1.3rem;
     }
 }
