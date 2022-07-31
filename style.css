@@ -152,9 +152,90 @@ li{
 }
 /* ------------------------------------------------------------------- Hero */
 .hero{
-    height: 400px;
     background-color: var(--color-tertiary);
     grid-column: center-start / center-end;
+    padding: var(--padding-l);
+    padding-bottom: 11.5rem;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3vw;
+
+    color: var(--color-quaternary);
+    clip-path: polygon(0 0,100% 0,100% 85%,50% 100%,0 85%);    
+}
+
+.hero__content{
+    flex-basis: 35rem;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.hero__content--rating{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-star,
+.hero__content--rating__text span{
+    color: var(--color-secondary);
+}
+
+.fa-star,
+.hero__content--rating__text p{
+    font-size: 1.5rem;
+}
+
+#main-title{
+    font-size: calc(4rem +0.5vw);
+    font-weight: 500;
+    font-family: var(--font-family-main);
+}
+
+#main-para{
+    font-size: var(--font-size-s);
+}
+
+.hero__content--trial{
+    align-self: flex-start;
+    padding: 1.5rem 2.5rem;
+    background: none;
+    border: 1px solid var(--color-secondary);
+    color: var(--color-secondary);
+    cursor: pointer;
+    transition: all 0.35s ease-in-out;
+}
+
+.hero__content--trial:hover{
+    background-color: var(--color-primary);
+}
+
+.hero__content--getting-started,
+.hero__content--getting-started__Credit-card,
+.hero__content--getting-started__free-templates{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.hero__content--getting-started__Credit-card p,
+.hero__content--getting-started__free-templates p,
+.fa-check-circle {
+    font-size: var(--font-size-s);
+}
+
+.fa-check-circle{
+    color: var(--color-secondary);
+}
+.hero__vec{
+    flex-basis: 35rem;
+    flex-grow: 1;
 }
 
 /* ------------------------------------------------------------------- Features */
@@ -186,6 +267,22 @@ li{
 }
 
 /* ------------------------------------------------------------------- Media Queries */
+@media screen and (min-width: 1000px){
+    #main-para,   
+    .hero__content--trial,
+    .hero__content--getting-started__Credit-card p,
+    .hero__content--getting-started__free-templates p,
+    .fa-check-circle{ 
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 870px){
+    .hero{
+        clip-path: polygon(0 0,100% 0,100% 95%,50% 100%,0 95%);
+    }
+}
+
 @media screen and (max-width: 800px) {
 
     /* *--*-*-*-*-*-*-*------------------******** Hamburger Menu */
@@ -270,5 +367,18 @@ li{
         background-color: var(--color-primary);
         transform: translateX(100rem);
         transition: all 0.55s cubic-bezier(1,0,0,1);
+    }
+}
+
+@media screen and (max-width: 500px){
+    .hero{
+        padding: 2.5rem;
+    }
+
+    .fa-star,
+    .hero__content--rating__text p,
+    .hero__content--getting-started__Credit-card p,
+    .hero__content--getting-started__free-templates p,{
+        font-size: 1.3rem;
     }
 }
