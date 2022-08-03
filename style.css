@@ -240,10 +240,90 @@ li{
 
 /* ------------------------------------------------------------------- Features */
 .features{
-    height: 400px;
-    background-color: var(--color-quaternary);
+    /* background-color: var(--color-primary); */
     grid-column: center-start / center-end;
+    padding: var(--padding-l);
+
+    /* padding-top: 13rem;
+    margin-top: -10rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+
+
+
+    /* clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        85% 100%,
+        75% 95%,
+        63% 100%,
+        51% 95%,
+        39% 100%,
+        27% 96%,
+        15% 100%,
+        0 100%
+    ); */
 }
+
+.features__title{
+    color: var(--color-quaternary);
+    font-size: var(--font-size-m);
+    font-weight:400;
+    font-family: var(--font-family-main);
+}
+
+.featues__content{
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem ,1fr));
+    gap: 5rem;
+}
+
+.featues__content--adaptability,
+.featues__content--customizability,
+.featues__content--efficiency{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(2, min-content);
+    gap: 2rem;
+}
+
+.featues__content--adaptability h3,
+.featues__content--customizability h3,
+.featues__content--efficiency h3{
+    font-size: var(--font-size-s);
+    grid-column: 2/-1;
+    font-weight: 300;
+    align-self: start;
+}
+
+.fa-clock,
+.fa-file,
+.fa-mobile,
+.featues__content--adaptability h3,
+.featues__content--customizability h3,
+.featues__content--efficiency h3{
+    color: var(--color-secondary);
+}
+
+.fa-clock,
+.fa-file,
+.fa-mobile{
+    font-size: 3.5rem;
+}
+
+.featues__content--adaptability p,
+.featues__content--customizability p,
+.featues__content--efficiency p{
+    grid-column: 1 / -1;
+    font-size: var(--font-size-xs);
+    color: var(--color-quaternary);
+}
+
 
 /* ------------------------------------------------------------------- Diversify */
 .diversify{
@@ -272,7 +352,10 @@ li{
     .hero__content--trial,
     .hero__content--getting-started__Credit-card p,
     .hero__content--getting-started__free-templates p,
-    .fa-check-circle{ 
+    .fa-check-circle,
+    .featues__content--adaptability p,
+    .featues__content--customizability p,
+    .featues__content--efficiency p{ 
         font-size: 1.5rem;
     }
 }
@@ -368,6 +451,25 @@ li{
         transform: translateX(100rem);
         transition: all 0.55s cubic-bezier(1,0,0,1);
     }
+
+    /*------*----**----------*--- features */
+    .features__title{
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .featues__content--adaptability h3,
+    .featues__content--customizability h3,
+    .featues__content--efficiency h3{
+        font-size: 2.5rem;
+    }
+
+    .featues__content--adaptability p,
+.featues__content--customizability p,
+.featues__content--efficiency p{
+    font-size: 1.4rem;
+}
+    
 }
 
 @media screen and (max-width: 500px){
@@ -380,5 +482,9 @@ li{
     .hero__content--getting-started__Credit-card p,
     .hero__content--getting-started__free-templates p{
         font-size: 1.3rem;
+    }
+
+    .hero__content--trial{
+        padding: 1rem 2rem;
     }
 }
