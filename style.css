@@ -412,7 +412,7 @@ li{
 @media screen and (min-width: 990px){
     .diversify__content--link{
         font-size: 1.3rem;
-        padding: 1 rem 2rem;
+        padding: 1rem 2rem;
     }
 }
 
@@ -423,7 +423,9 @@ li{
     
     .diversify{
         flex-direction: column;  
-        padding-top: 5rem;
+
+        padding-top: 8rem;
+        padding: var(--padding-l);
         align-items: flex-start;
     }
 
@@ -436,9 +438,10 @@ li{
         align-items: flex-start;
     }
 
-    /* .diversify__image img{
+    .diversify__image img{
         width: 100%;
-    } */
+        height: 100%;
+    }
 }
 
 @media screen and (max-width: 800px) {
