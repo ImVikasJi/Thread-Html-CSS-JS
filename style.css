@@ -451,7 +451,7 @@ li{
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem , 1fr));
-    gap: 7rem 2rem;
+    gap: 7rem 2rem; 
 }
 
 .footer__sub-section,
