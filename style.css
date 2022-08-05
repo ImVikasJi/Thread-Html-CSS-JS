@@ -381,9 +381,63 @@ li{
 
 /* ------------------------------------------------------------------- Testimonials */
 .testimonials{
-    height: 400px;
     background-color: var(--color-tertiary);
     grid-column: center-start / center-end;
+    padding: var(--padding-m);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    gap: 5rem;
+}
+
+.testimonial{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4, min-content);
+    gap: 2rem 1rem;
+}
+
+.testimonial__img{
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;    
+
+    border-radius: 50%;
+    grid-row: 1 / 3;
+    justify-self: start;
+}
+
+.testimonial__name{
+    font-size: 1.5rem;
+    color: var(--color-quaternary);
+
+    align-self: end;
+}
+
+.testimonial__profit{
+    font-size: 1.2rem;
+    color: var(--color-quaternary);
+
+    align-self: start;
+}
+
+.testimonial__para{
+    font-size: 1rem;
+    color: var(--color-quaternary);
+
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+}
+
+.testimonial__link{
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    background-color: var(--color-secondary);
+
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+
 }
 
 /* ------------------------------------------------------------------- Footer */
